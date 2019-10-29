@@ -1,12 +1,13 @@
 package com.patrick.testcases;
 import com.webdriver.framework.IAction;
-import com.webdriver.framework.BasicClass;
+import com.webdriver.framework.BaseClass;
 
 public class funcA implements IAction{
 	@Override
 	public boolean execute(String strParams) {
 		 System.out.println(strParams);
-		 System.out.println(BasicClass.getPropFile().toString());
+		 System.out.println("x=" + BaseClass.getPropValue("x"));
+		 
 		return true;
 		
 	}

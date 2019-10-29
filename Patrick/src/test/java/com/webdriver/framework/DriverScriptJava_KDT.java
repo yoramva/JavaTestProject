@@ -1,5 +1,5 @@
 package com.webdriver.framework;
-import  com.webdriver.framework.BasicClass;
+import  com.webdriver.framework.BaseClass;
 public class DriverScriptJava_KDT
 {
 
@@ -9,7 +9,7 @@ public class DriverScriptJava_KDT
 	 //Declaring the path of the Excel file with the name of the Excel file
 	 String sPath = ".\\TestData\\dataEngine.xlsx";
 	
-	 BasicClass bc = new BasicClass("dataEngine.properties");
+	 BaseClass bc = new BaseClass("dataEngine.properties");
 	 
 	 //Here we are passing the Excel path and SheetName to connect with the Excel file     
 	 //This method was created previously
