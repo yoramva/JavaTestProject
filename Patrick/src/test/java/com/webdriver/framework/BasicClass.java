@@ -22,11 +22,7 @@ public class BasicClass {
 	    } 
 		
 	}
-	public static void setPropFile(String propFile)
-	{
-		propertyFile = propFile;
-		
-	}
+	
 	public static String getPropFile()
 	{
 		return(propertyFile);
