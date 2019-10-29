@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="560" started-at="2019-10-28T10:38:37Z" finished-at="2019-10-28T10:38:37Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="560" started-at="2019-10-28T10:38:37Z" finished-at="2019-10-28T10:38:37Z">
+      <class name="com.webdriver.framework.TestDriver">
+        <test-method status="PASS" signature="TC_Driver()[pri:0, instance:com.webdriver.framework.TestDriver@28d25987]" name="TC_Driver" duration-ms="536" started-at="2019-10-28T10:38:37Z" finished-at="2019-10-28T10:38:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_Driver -->
+      </class> <!-- com.webdriver.framework.TestDriver -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
