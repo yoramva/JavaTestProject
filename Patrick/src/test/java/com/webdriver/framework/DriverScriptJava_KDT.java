@@ -1,13 +1,5 @@
 package com.webdriver.framework;
-
-
 import java.lang.reflect.Method;
-
-
-
-
-
-
 public class DriverScriptJava_KDT
 {
  //This is a class object, declared as 'public static'
