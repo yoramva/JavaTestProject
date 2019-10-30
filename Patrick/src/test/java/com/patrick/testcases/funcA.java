@@ -1,5 +1,6 @@
 package com.patrick.testcases;
-import com.webdriver.framework.IAction;
+import com.webdriver.framework.*;
+
 import com.webdriver.framework.BaseClass;
 
 public class funcA implements IAction{

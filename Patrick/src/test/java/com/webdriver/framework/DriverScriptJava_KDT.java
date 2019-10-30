@@ -1,5 +1,4 @@
 package com.webdriver.framework;
-import  com.webdriver.framework.BaseClass;
 public class DriverScriptJava_KDT
 {
 

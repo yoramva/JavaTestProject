@@ -1,5 +1,5 @@
 package com.patrick.testcases;
-import com.webdriver.framework.IAction;
+import com.webdriver.framework.*;
 
 public class funcC  implements IAction{
 	@Override
