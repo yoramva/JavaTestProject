@@ -2,14 +2,13 @@ package com.webdriver.framework;
 public class DriverScriptJava_KDT
 {
 
-
  public static void main(String[] args) throws Exception 
  {
 	 //Declaring the path of the Excel file with the name of the Excel file
 	 String sPath = ".\\TestData\\dataEngine.xlsx";
 	
-	 BaseClass bc = new BaseClass("dataEngine.properties");
-	 
+	 //BaseClass bc = new BaseClass("dataEngine.properties");
+	 new BaseClass("dataEngine.properties");
 	 //Here we are passing the Excel path and SheetName to connect with the Excel file     
 	 //This method was created previously
 	 ReadExcelData.setExcelFile(sPath, "Sheet1");
@@ -23,7 +22,7 @@ public class DriverScriptJava_KDT
 	 String strSkip="";
 	 String strID="";
 	 String strHeaders="";
-	 boolean rc;
+	 boolean rc=false;
 	 while(strSkip.compareToIgnoreCase("eof") != 0)
 	 {
 		 iRow++;

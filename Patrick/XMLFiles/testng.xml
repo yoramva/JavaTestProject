@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.patrick.testcases.TC_Login"/>
+      <class name="com.webdriver.framework.TestRunner"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

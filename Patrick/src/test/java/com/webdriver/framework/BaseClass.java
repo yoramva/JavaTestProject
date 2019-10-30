@@ -1,9 +1,9 @@
 package com.webdriver.framework;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Properties;
 
+import org.apache.commons.configuration.ConfigurationException;
+import org.apache.commons.configuration.PropertiesConfiguration;
 public class BaseClass {
 	
 	private static String propertyFile;
@@ -39,36 +39,35 @@ public class BaseClass {
 	}
 	public static String getPropValue(String byKey)
 	{
-		Properties p = new Properties();
-		try 
-		{
-			p.load(new FileInputStream(propertyFile));
-		}
-		catch (IOException e)
-		{
+		PropertiesConfiguration conf = null;
+		try {
+			conf = new PropertiesConfiguration(propertyFile);
+		} catch (ConfigurationException e1) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			e1.printStackTrace();
 		}
-		String value =  p.getProperty(byKey);
-		
-		p=null;
-		return value;
 
+		 String x = conf.getString(byKey);
+		 return x;
 	}
 	public static void setPropValue(String key , String value)
 	{
-		Properties p = new Properties();
-		try 
-		{
-			p.load(new FileInputStream(propertyFile));
-		}
-		catch (IOException e)
-		{
+
+		PropertiesConfiguration conf = null;
+		try {
+			conf = new PropertiesConfiguration(propertyFile);
+		} catch (ConfigurationException e1) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			e1.printStackTrace();
 		}
-		p.setProperty(key, value);
-		p=null;
+
+		conf.setProperty(key, value);
+		try {
+			conf.save();
+		} catch (ConfigurationException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}    
 	}
 
    
