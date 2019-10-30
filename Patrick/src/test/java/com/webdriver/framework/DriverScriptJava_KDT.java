@@ -39,8 +39,9 @@ public class DriverScriptJava_KDT
 			 strRowData = ReadExcelData.getRowColumnData(iRow , strCols);
 		 }
 		 strRowData = "ID=" + strID + ";SKIP=" + strSkip + ";" + strRowData;
+		 /*
 		 if (!strSkip.equalsIgnoreCase("x"))
-			 rc = execute_Actions(strRowData); 
+			 rc = execute_Actions(strRowData);*/ 
 	 }
 	 
 	
@@ -49,7 +50,7 @@ public class DriverScriptJava_KDT
  
 //This method contains the code to perform some action 
 //As it is completely different set of logic, which revolves around the action only, it makes sense to keep it separate from the main driver script 
-//This is to execute test step (Action)
+/*This is to execute test step (Action)
 private static boolean execute_Actions(String strParams) throws Exception 
  {
 	String tc =  Utils.getValueBetweenStrings(strParams , "TESTCASE=", ";");
@@ -60,5 +61,5 @@ private static boolean execute_Actions(String strParams) throws Exception
 	}
 	return true;
 	
- }
+ }*/
 }

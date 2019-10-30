@@ -1,5 +1,8 @@
 package com.webdriver.framework;
 import org.testng.annotations.Test;
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 
 public class TestRunner {
 
@@ -13,6 +16,9 @@ public class TestRunner {
 		 String strID="";
 		 String strHeaders="";
 		 boolean rc=false;
+		 ExtentReports report = new ExtentReports("c:\\ExtentReportResults.html");
+		 
+			
 		 //Declaring the path of the Excel file with the name of the Excel file
 		 String sPath = ".\\TestData\\dataEngine.xlsx";
 		 //BaseClass bc = new BaseClass("dataEngine.properties");
@@ -42,19 +48,37 @@ public class TestRunner {
 			 }
 			 strRowData = "ID=" + strID + ";SKIP=" + strSkip + ";" + strRowData;
 			 if (!strSkip.equalsIgnoreCase("x"))
-				 rc = execute_Actions(strRowData); 
+			 {
+				 ExtentTest test = report.startTest(Utils.getValueBetweenStrings(strRowData , "TESTCASE=", ";"));
+				 rc = execute_Actions(strRowData,test);
+				 if(rc)
+				 {
+					 test.log(LogStatus.PASS, "pass");
+				 }
+				 else
+				 {
+					 test.log(LogStatus.FAIL, "fail");
+				 }
+				 report.endTest(test);
+	
+			 }
 		 }
+		 report.flush();
 	}
 	//This method contains the code to perform some action 
 	//As it is completely different set of logic, which revolves around the action only, it makes sense to keep it separate from the main driver script 
 	//This is to execute test step (Action)
-	private static boolean execute_Actions(String strParams) throws Exception 
+	private static boolean execute_Actions(String strParams,ExtentTest test) throws Exception 
 	 {
+		
+		
 		String tc =  Utils.getValueBetweenStrings(strParams , "TESTCASE=", ";");
+		
+		
 		if (!tc.equalsIgnoreCase("")){
 			tc = "com.patrick.testcases." + tc;
 			IAction action = (IAction)Class.forName(tc).newInstance();
-			return action.execute(strParams);	
+			return action.execute(strParams,test);	
 		}
 		return true;
 		

@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="560" started-at="2019-10-28T10:38:37Z" finished-at="2019-10-28T10:38:37Z">
+  <suite name="Default suite" duration-ms="1312" started-at="2019-10-30T10:18:32Z" finished-at="2019-10-30T10:18:33Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="560" started-at="2019-10-28T10:38:37Z" finished-at="2019-10-28T10:38:37Z">
-      <class name="com.webdriver.framework.TestDriver">
-        <test-method status="PASS" signature="TC_Driver()[pri:0, instance:com.webdriver.framework.TestDriver@28d25987]" name="TC_Driver" duration-ms="536" started-at="2019-10-28T10:38:37Z" finished-at="2019-10-28T10:38:37Z">
+    <test name="Default test" duration-ms="1312" started-at="2019-10-30T10:18:32Z" finished-at="2019-10-30T10:18:33Z">
+      <class name="com.webdriver.framework.TestRunner">
+        <test-method status="PASS" signature="TestRunner()[pri:0, instance:com.webdriver.framework.TestRunner@6a4f787b]" name="TestRunner" duration-ms="1289" started-at="2019-10-30T10:18:32Z" finished-at="2019-10-30T10:18:33Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_Driver -->
-      </class> <!-- com.webdriver.framework.TestDriver -->
+        </test-method> <!-- TestRunner -->
+      </class> <!-- com.webdriver.framework.TestRunner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
