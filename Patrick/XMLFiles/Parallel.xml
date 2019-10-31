@@ -8,5 +8,14 @@
     <classes>
       <class name="com.webdriver.framework.TestRunner"/>
     </classes>
-    </test>
+  </test>
+    <test name="Test2">
+	  <parameter name="environmentId" value="2"/>
+	<parameter name="testsetName" value="teststuff"/>
+    <classes>
+      <class name="com.webdriver.framework.TestRunner"/>
+    </classes>
+  </test>
+ 
+  
 </suite> <!-- Suite -->

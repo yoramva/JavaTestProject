@@ -37,6 +37,11 @@ public class ReadExcelData
 	
  }
  
+ public static int getSheetRowCount()
+ {
+	 return (ExcelWSheet.getLastRowNum());
+ }
+ 
  public static String getSheetHeaders(int RowNum) throws Exception
  {
 	 int noOfColumns = ExcelWSheet.getRow(0).getLastCellNum();
