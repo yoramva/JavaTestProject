@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="ParallelTest" duration-ms="33141" started-at="2019-11-04T14:42:14Z" finished-at="2019-11-04T14:42:47Z">
+  <suite name="ParallelTest" duration-ms="59547" started-at="2019-11-04T14:46:21Z" finished-at="2019-11-04T14:47:20Z">
     <groups>
     </groups>
-    <test name="Test1" duration-ms="33141" started-at="2019-11-04T14:42:14Z" finished-at="2019-11-04T14:42:47Z">
+    <test name="Test1" duration-ms="59547" started-at="2019-11-04T14:46:21Z" finished-at="2019-11-04T14:47:20Z">
       <class name="com.webdriver.framework.TestRunner">
-        <test-method status="PASS" signature="TestRunner(java.lang.String, java.lang.String)[pri:0, instance:com.webdriver.framework.TestRunner@6d4b1c02]" name="TestRunner" duration-ms="33115" started-at="2019-11-04T14:42:14Z" finished-at="2019-11-04T14:42:47Z">
+        <test-method status="PASS" signature="TestRunner(java.lang.String, java.lang.String)[pri:0, instance:com.webdriver.framework.TestRunner@7a69b07]" name="TestRunner" duration-ms="59515" started-at="2019-11-04T14:46:21Z" finished-at="2019-11-04T14:47:20Z">
           <params>
             <param index="0">
               <value>
