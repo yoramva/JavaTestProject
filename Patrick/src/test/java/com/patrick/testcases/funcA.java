@@ -35,7 +35,8 @@ public class funcA implements IAction{
 		 //driver.get("http://www.google.com");
 		 driver.get("https://www.waves.com/plugins");
 		 JSWaiter.waitUntilJQueryReady();
-		 List<WebElement> listOfElements = driver.findElements(By.xpath("//article[@data-type='jplist-item']"));
+		 //List<WebElement> listOfElements = driver.findElements(By.xpath("//article[@data-type='jplist-item']"));
+		 List<WebElement> listOfElements = driver.findElements(By.cssSelector("article[data-type='jplist-item']"));
 		 for(int i=0 ; i<listOfElements.size();i++)
 		 {
 			 WebElement rect = listOfElements.get(i).findElement(By.cssSelector("div[class='jplist-item-target']"));
