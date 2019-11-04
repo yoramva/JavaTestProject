@@ -4,6 +4,8 @@ import java.util.Date;
 
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
+
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -81,7 +83,7 @@ public class TestRunner {
 		if (!tc.equalsIgnoreCase("")){
 			tc = "com.patrick.testcases." + tc;
 			IAction action = (IAction)Class.forName(tc).newInstance();
-			return action.execute(strParams,test);	
+			return (action.execute(strParams,test));	 
 		}
 		return true;
 		
