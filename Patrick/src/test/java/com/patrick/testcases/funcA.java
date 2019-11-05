@@ -42,21 +42,27 @@ public class funcA implements IAction{
 		 {
 			 //WebElement rect = listOfElements.get(i).findElement(By.cssSelector("div[class='jplist-item-target']"));
 			 WebElement rect = listOfElements.get(i);
-			 String link = rect.findElement(By.cssSelector(".title > a")).getText();
-			 System.out.println(link);
-			 Utils.scrollToElementByOffset(driver , rect, 0);
+			 WebElement link = rect.findElement(By.cssSelector("p.title > a"));
 			 
-			 WebElement addToCartRect = rect.findElement(By.cssSelector("div[class='add-to-cart-flex relative']"));
+			 
+			 //check the sale badge
+			 String saleMsg = rect.getAttribute("data-badge");
+			 System.out.println(link.getText() + ' ' + saleMsg);
+			 
+			 
+			 Utils.scrollToElementByOffset(driver , rect, 0);
+			 //link.click();
+			 //WebElement addToCartRect = rect.findElement(By.cssSelector("div[class='add-to-cart-flex relative']"));
 
 			 WebElement webElement = rect.findElement(By.linkText("ADD TO CART"));
 
 			 
 			 
-			 Utils.scrollToElementByOffset(driver , webElement, -200).click();
+			 //Utils.scrollToElementByOffset(driver , webElement, -200).click();
 			 
 			 //rect.findElement(By.linkText("ADD TO CART")).click();
 			 
-			 driver.findElement(By.id("cboxClose")).click();
+			 //driver.findElement(By.id("cboxClose")).click();
 
 		 }
 		 driver.close();
