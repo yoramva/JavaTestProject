@@ -1,6 +1,7 @@
 package com.patrick.testcases;
 import java.util.List;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,7 +16,6 @@ import com.webdriver.framework.*;
 
 
 public class funcA implements IAction{
-
 
 	@Override
 	public boolean execute(String strParams,ExtentTest test) {
@@ -35,14 +35,29 @@ public class funcA implements IAction{
 		 //driver.get("http://www.google.com");
 		 driver.get("https://www.waves.com/plugins");
 		 JSWaiter.waitUntilJQueryReady();
+		 driver.manage().window().maximize();
 		 //List<WebElement> listOfElements = driver.findElements(By.xpath("//article[@data-type='jplist-item']"));
 		 List<WebElement> listOfElements = driver.findElements(By.cssSelector("article[data-type='jplist-item']"));
 		 for(int i=0 ; i<listOfElements.size();i++)
 		 {
-			 WebElement rect = listOfElements.get(i).findElement(By.cssSelector("div[class='jplist-item-target']"));
-			 //listOfElements.get(0).findElement(By.cssSelector(".title")).getText()
-			 System.out.println(rect.findElement(By.cssSelector(".title")).getText());
- 
+			 //WebElement rect = listOfElements.get(i).findElement(By.cssSelector("div[class='jplist-item-target']"));
+			 WebElement rect = listOfElements.get(i);
+			 String link = rect.findElement(By.cssSelector(".title > a")).getText();
+			 System.out.println(link);
+			 Utils.scrollToElementByOffset(driver , rect, 0);
+			 
+			 WebElement addToCartRect = rect.findElement(By.cssSelector("div[class='add-to-cart-flex relative']"));
+
+			 WebElement webElement = rect.findElement(By.linkText("ADD TO CART"));
+
+			 
+			 
+			 Utils.scrollToElementByOffset(driver , webElement, -200).click();
+			 
+			 //rect.findElement(By.linkText("ADD TO CART")).click();
+			 
+			 driver.findElement(By.id("cboxClose")).click();
+
 		 }
 		 driver.close();
 		return true;	

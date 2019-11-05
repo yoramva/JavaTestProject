@@ -7,6 +7,8 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 
 public  class Utils {
@@ -31,4 +33,16 @@ public  class Utils {
 		 FileUtils.copyFile(source, finalDestination);
 		 return destination;
 	 }
+	 
+		public static WebElement scrollToElementByOffset(WebDriver driver , WebElement element, int offset) {
+
+		    JavascriptExecutor jse = (JavascriptExecutor) driver;
+
+		    jse.executeScript("window.scrollTo(" + element.getLocation().getX() + "," + (element.getLocation().getY()
+		            + offset) + ");");
+
+		    return element;
+
+		}
+		
 }
