@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="ParallelTest" duration-ms="59547" started-at="2019-11-04T14:46:21Z" finished-at="2019-11-04T14:47:20Z">
+  <suite name="ParallelTest" duration-ms="18398" started-at="2019-11-05T08:50:38Z" finished-at="2019-11-05T08:50:57Z">
     <groups>
     </groups>
-    <test name="Test1" duration-ms="59547" started-at="2019-11-04T14:46:21Z" finished-at="2019-11-04T14:47:20Z">
+    <test name="Test1" duration-ms="18398" started-at="2019-11-05T08:50:38Z" finished-at="2019-11-05T08:50:57Z">
       <class name="com.webdriver.framework.TestRunner">
-        <test-method status="PASS" signature="TestRunner(java.lang.String, java.lang.String)[pri:0, instance:com.webdriver.framework.TestRunner@7a69b07]" name="TestRunner" duration-ms="59515" started-at="2019-11-04T14:46:21Z" finished-at="2019-11-04T14:47:20Z">
+        <test-method status="FAIL" signature="TestRunner(java.lang.String, java.lang.String)[pri:0, instance:com.webdriver.framework.TestRunner@6d4b1c02]" name="TestRunner" duration-ms="18373" started-at="2019-11-05T08:50:38Z" finished-at="2019-11-05T08:50:57Z">
           <params>
             <param index="0">
               <value>
@@ -20,6 +20,52 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for com.patrick.utils.JSWaiter$$Lambda$214/1125031429@50d00476 (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'YORAM', ip: '10.0.3.100', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.70, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\yoramv\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:63926}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: be9f7cbc6ab0b670f93557a8bbd89cd7]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for com.patrick.utils.JSWaiter$$Lambda$214/1125031429@50d00476 (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'YORAM', ip: '10.0.3.100', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.70, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\yoramv\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:63926}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: be9f7cbc6ab0b670f93557a8bbd89cd7
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:113)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:283)
+at com.patrick.utils.JSWaiter.waitForJQueryLoad(JSWaiter.java:36)
+at com.patrick.utils.JSWaiter.waitUntilJQueryReady(JSWaiter.java:99)
+at com.patrick.testcases.funcA.execute(funcA.java:37)
+at com.webdriver.framework.TestRunner.execute_Actions(TestRunner.java:86)
+at com.webdriver.framework.TestRunner.TestRunner(TestRunner.java:56)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestRunner -->
