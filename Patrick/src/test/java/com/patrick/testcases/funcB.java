@@ -44,6 +44,8 @@ public class funcB implements IAction{
 		       System.out.println("404 Found");
 		      }
 		      driver.navigate().back();
+		  
+		  }
 		  return true;
 	}
 }
