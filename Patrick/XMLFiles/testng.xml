@@ -3,8 +3,8 @@
 <suite name="ParallelTest" parallel="tests" thread-count="2">
 	
   <test name="Test1">
-  <parameter name="environmentId" value="11"/>
-  <parameter name="testsetName" value="Sanity"/>
+  <!--parameter name="environmentId" value="11"/-->
+  <!--parameter name="testsetName" value="Sanity"/-->
     <classes>
       <class name="com.webdriver.framework.TestRunner"/>
     </classes>

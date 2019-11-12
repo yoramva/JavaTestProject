@@ -12,10 +12,13 @@ import com.relevantcodes.extentreports.LogStatus;
 
 public class TestRunner {
 
-	@Parameters({ "environmentId" , "testsetName" })
+	//@Parameters({ "environmentId" , "testsetName" })
 	@Test
-	public void TestRunner(String environmentId , String testsetName) throws Exception 
+	//public void TestRunner(String environmentId , String testsetName) throws Exception 
+	public void TestRunner()
 	{
+		String testsetName="Sanity";
+		String environmentId="11";
 		 String strRowData  = "";
 		 String strCols="";
 		 String strSkip="";
