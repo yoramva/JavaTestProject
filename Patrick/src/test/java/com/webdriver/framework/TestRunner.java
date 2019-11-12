@@ -15,7 +15,7 @@ public class TestRunner {
 	//@Parameters({ "environmentId" , "testsetName" })
 	@Test
 	//public void TestRunner(String environmentId , String testsetName) throws Exception 
-	public void TestRunner()
+	public void TestRunner() throws Exception
 	{
 		String testsetName="Sanity";
 		String environmentId="11";
